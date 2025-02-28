@@ -4,16 +4,28 @@ configure_terminal: true
 configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
+configure_dock: true
+dockitems_remove:
+- Safari
+- Messages
+- Mail
+- Maps
+- Photos
+- FaceTime
+- Calendar
+- Contacts
+- Reminders
+- Notes
+- Freeformn
+- TV
+- Music
+- News
+- 'App Store'
+
+dockitems_persist:
+- name: "Zen Browser"
+  path: "/Applications/Zen.app/"
+  pos: 2
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -34,7 +46,7 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - ant
+  # - ant
   - autoconf
   - cmake
   - cmatrix
@@ -49,6 +61,7 @@ homebrew_installed_packages:
   - nvm
   - ssh-copy-id
   - wget
+  - zsh
 
 homebrew_taps: []
 
@@ -58,15 +71,18 @@ homebrew_cask_apps:
   - betterdisplay
   - docker
   - iterm2
+  - microsoft-teams
   - rectangle
+  - utm
   - visual-studio-code
   - xquartz
   - zen-browser
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
-mas_email: ""
-mas_password: ""
+mas_installed_apps:
+  - { id: 985367838, name: "Microsoft Outlook" }
+mas_email: "{{ apple_email }}"
+mas_password: "{{ apple_password }}"
 
 osx_script: "~/.osx --no-restart"
 

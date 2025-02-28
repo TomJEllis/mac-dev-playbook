@@ -2,6 +2,13 @@
 - name: Configure host.
   hosts: all
 
+  vars_prompt:
+    - name: apple_email
+      prompt: What is your Apple Email?
+      private: false
+    - name: apple_password
+      prompt: What is your Apple Password?
+
   vars_files:
     - default.config.yml
 
