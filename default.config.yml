@@ -38,7 +38,7 @@ dotfiles_repo: https://github.com/tomjellis/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/repos/dotfiles
 dotfiles_files:
-  # - .zshrc
+  - .zshrc
   # - .gitignore
   # - .inputrc
   - .osx
@@ -59,6 +59,7 @@ homebrew_installed_packages:
   - sqlite
   - node
   - nvm
+  - rust
   - ssh-copy-id
   - wget
   - zsh
@@ -69,6 +70,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - balenaetcher
   - betterdisplay
+  - discord
   - docker
   - iterm2
   - microsoft-teams
