@@ -34,6 +34,10 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
+dotfiles_secrets_repo: https://github.com/tomjellis/dotfiles-secrets.git
+dotfiles_secrets_repo_accept_hostkey: true
+dotfiles_secrets_repo_local_destination: ~/repos/dotfiles-secrets
+
 dotfiles_repo: https://github.com/tomjellis/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/repos/dotfiles
@@ -43,6 +47,7 @@ dotfiles_files:
   # - .inputrc
   - .osx
   # - .vimrc
+  - .tmux.conf
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -61,6 +66,8 @@ homebrew_installed_packages:
   - nvm
   - rust
   - ssh-copy-id
+  - tmux
+  - tpm
   - wget
   - zsh
 

@@ -2,5 +2,6 @@
 .DS_Store
 .ansible
 *.retry
-roles*
+roles/*
+!roles/dotfiles-secrets/
 config.yml
